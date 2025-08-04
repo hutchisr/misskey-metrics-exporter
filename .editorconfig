@@ -1,0 +1,3 @@
+[*.json,*.jsonc,*.yaml,*.yaml.gotmpl]
+indent_style = space
+indent_size = 2

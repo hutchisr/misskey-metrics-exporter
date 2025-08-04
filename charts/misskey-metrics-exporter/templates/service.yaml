@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "misskey-metrics-exporter.fullname" . }}
+  labels:
+    {{- include "misskey-metrics-exporter.labels" . | nindent 4 }}
+spec:
+  type: {{ .Values.service.type }}
+  ports:
+    - port: {{ .Values.service.port }}
+      targetPort: http
+      protocol: TCP
+      name: http
+  selector:
+    {{- include "misskey-metrics-exporter.selectorLabels" . | nindent 4 }}

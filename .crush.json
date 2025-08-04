@@ -1,0 +1,13 @@
+{
+  "$schema": "https://charm.land/crush.json",
+  "lsp": {
+    "deno": {
+      "command": "deno",
+      "args": ["lsp"]
+    },
+    "typescript": {
+      "command": "typescript-language-server",
+      "args": ["--stdio"]
+    }
+  }
+}

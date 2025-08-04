@@ -1,0 +1,15 @@
+[env]
+'_'.source = "./aws_env.sh"
+
+[tools]
+deno = "latest"
+
+[tasks]
+build = "docker buildx build -t lax.vultrcr.com/mercury/misskey-metrics-exporter . --push"
+start = "deno task start"
+dev = "deno task dev"
+
+helm-push= """helm package charts/misskey-metrics-exporter
+helm push misskey-metrics-exporter-*.tgz oci://lax.vultrcr.com/mercury/charts
+rm misskey-metrics-exporter-*.tgz
+"""
