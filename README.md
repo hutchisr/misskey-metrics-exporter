@@ -59,7 +59,6 @@ A Prometheus metrics exporter for Misskey instances that provides comprehensive 
 |----------|---------|-------------|
 | `PORT` | `9090` | HTTP server port |
 | `UPDATE_INTERVAL` | `60000` | Metrics update interval (ms) |
-
 | `MISSKEY_URL` | `http://localhost:3000` | Misskey instance URL |
 | `DB_HOST` | `localhost` | PostgreSQL host |
 | `DB_PORT` | `5432` | PostgreSQL port |
