@@ -6,7 +6,6 @@ Deno.test("getConfig returns default values when env vars not set", () => {
   
   assertEquals(config.port, 9090);
   assertEquals(config.updateInterval, 60000);
-  assertEquals(config.enableLogParsing, false);
   assertEquals(config.misskeyUrl, "http://localhost:3000");
   assertEquals(config.database.host, "localhost");
   assertEquals(config.database.port, 5432);
@@ -18,7 +17,6 @@ Deno.test("getConfig returns default values when env vars not set", () => {
 Deno.test("getConfig uses environment variables when set", () => {
   Deno.env.set("PORT", "8080");
   Deno.env.set("UPDATE_INTERVAL", "30000");
-  Deno.env.set("ENABLE_LOG_PARSING", "true");
   Deno.env.set("MISSKEY_URL", "https://example.com");
   Deno.env.set("DB_HOST", "db.example.com");
   Deno.env.set("DB_PORT", "3306");
@@ -30,7 +28,6 @@ Deno.test("getConfig uses environment variables when set", () => {
   
   assertEquals(config.port, 8080);
   assertEquals(config.updateInterval, 30000);
-  assertEquals(config.enableLogParsing, true);
   assertEquals(config.misskeyUrl, "https://example.com");
   assertEquals(config.database.host, "db.example.com");
   assertEquals(config.database.port, 3306);
@@ -40,7 +37,6 @@ Deno.test("getConfig uses environment variables when set", () => {
 
   Deno.env.delete("PORT");
   Deno.env.delete("UPDATE_INTERVAL");
-  Deno.env.delete("ENABLE_LOG_PARSING");
   Deno.env.delete("MISSKEY_URL");
   Deno.env.delete("DB_HOST");
   Deno.env.delete("DB_PORT");

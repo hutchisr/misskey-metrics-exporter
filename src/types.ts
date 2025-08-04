@@ -47,7 +47,6 @@ export interface MetricsData {
 export interface ExporterConfig {
   port: number;
   updateInterval: number;
-  enableLogParsing: boolean;
   database: DatabaseConfig;
   misskeyUrl: string;
 }

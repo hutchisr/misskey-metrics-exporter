@@ -1,12 +1,11 @@
 # Misskey Metrics Exporter
 
-A Prometheus metrics exporter for Misskey instances that provides comprehensive monitoring capabilities including database metrics, API health checks, and optional log parsing.
+A Prometheus metrics exporter for Misskey instances that provides comprehensive monitoring capabilities including database metrics and API health checks.
 
 ## Features
 
 - **Database Metrics**: User counts, note counts, instance statistics
 - **API Health Monitoring**: Response times and availability checks
-- **Log Parsing**: Optional log analysis for additional insights
 - **Kubernetes Ready**: Includes Helm chart for easy deployment
 - **Health Checks**: Built-in liveness and readiness probes
 
@@ -60,7 +59,7 @@ A Prometheus metrics exporter for Misskey instances that provides comprehensive 
 |----------|---------|-------------|
 | `PORT` | `9090` | HTTP server port |
 | `UPDATE_INTERVAL` | `60000` | Metrics update interval (ms) |
-| `ENABLE_LOG_PARSING` | `false` | Enable log file parsing |
+
 | `MISSKEY_URL` | `http://localhost:3000` | Misskey instance URL |
 | `DB_HOST` | `localhost` | PostgreSQL host |
 | `DB_PORT` | `5432` | PostgreSQL port |

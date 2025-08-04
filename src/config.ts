@@ -4,7 +4,6 @@ export function getConfig(): ExporterConfig {
   return {
     port: parseInt(Deno.env.get("PORT") ?? "9090"),
     updateInterval: parseInt(Deno.env.get("UPDATE_INTERVAL") ?? "60000"),
-    enableLogParsing: Deno.env.get("ENABLE_LOG_PARSING") === "true",
     misskeyUrl: Deno.env.get("MISSKEY_URL") ?? "http://localhost:3000",
     database: {
       host: Deno.env.get("DB_HOST") ?? "localhost",
