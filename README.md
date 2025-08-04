@@ -119,10 +119,29 @@ podAnnotations:
 
 ### Available Metrics
 
-- `misskey_users_total` - Total number of users
+**User Metrics:**
+- `misskey_users_total` - Total number of local users
+- `misskey_active_users{period}` - Number of active users by period (daily, weekly, monthly)
+
+**Content Metrics:**
 - `misskey_notes_total` - Total number of notes
-- `misskey_api_response_time` - API response time in milliseconds
-- `misskey_api_health` - API health status (1 = healthy, 0 = unhealthy)
+- `misskey_notes_created{period}` - Number of notes created by period (daily)
+
+**Federation Metrics:**
+- `misskey_federation_instances_total` - Number of federated instances
+- `misskey_federation_remote_users_total` - Number of remote users
+
+**Database Metrics:**
+- `misskey_database_connections` - Number of database connections
+- `misskey_database_size_bytes` - Database size in bytes
+
+**Server Metrics:**
+- `misskey_server_stats{type}` - Server statistics from Misskey API (notes, users, instances)
+- `misskey_instance_info{name,version,node_version}` - Instance information
+
+**Exporter Metrics:**
+- `misskey_exporter_scrape_duration_seconds{source}` - Time spent scraping metrics
+- `misskey_exporter_scrape_errors_total{source}` - Total number of scrape errors
 
 ## Security Considerations
 
