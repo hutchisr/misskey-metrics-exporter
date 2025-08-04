@@ -288,4 +288,4 @@ docker push your-registry/misskey-metrics-exporter:latest
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the FSL-1.1-MIT License - see the [LICENSE](LICENSE) file for details.
