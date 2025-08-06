@@ -4,6 +4,10 @@ metadata:
   name: {{ include "misskey-metrics-exporter.fullname" . }}
   labels:
     {{- include "misskey-metrics-exporter.labels" . | nindent 4 }}
+  {{- with .Values.service.annotations }}
+  annotations:
+    {{- toYaml . | nindent 4 }}
+  {{- end }}
 spec:
   type: {{ .Values.service.type }}
   ports:
